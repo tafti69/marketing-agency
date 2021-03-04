@@ -1,19 +1,41 @@
 import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
+
   const [open, setOpen] = React.useState(false);
 
   return (
     <div className="header">
       <nav>
-        <img src="/logo.svg" alt="" />
+        <Link href="/">
+          <a>
+            <img style={{ cursor: "pointer" }} src="/logo.svg" alt="" />
+          </a>
+        </Link>
         <ul>
           <div>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Work</li>
+            <li className={router.pathname == "/" ? "activeLink" : ""}>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li className={router.pathname == "/Services" ? "activeLink" : ""}>
+              <Link href="/Services">
+                <a>Services</a>
+              </Link>
+            </li>
+            <li className={router.pathname == "/Work" ? "activeLink" : ""}>
+              <Link href="/Work">
+                <a>Work</a>
+              </Link>
+            </li>
           </div>
-          <button className="talk">Let's Talk</button>
+          <a href="mailto:focus@info.ge" className="talk">
+            Contact Us
+          </a>
         </ul>
         <div onClick={() => setOpen(true)} className="burger">
           Menu
@@ -25,11 +47,19 @@ const Header = () => {
               <span></span>
             </div>
             <div>
-              <li>Home</li>
-              <li>Services</li>
-              <li>Work</li>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/Services">Services</Link>
+              </li>
+              <li>
+                <Link href="/Work">Work</Link>
+              </li>
             </div>
-            <button className="talk">Let's Talk</button>
+            <a href="mailto:focus@info.ge" className="talk">
+              Contact Us
+            </a>
           </div>
         )}
       </nav>

@@ -67,7 +67,7 @@ const services = [
   },
 ];
 
-const Services = () => {
+const ServicesSection = () => {
   return (
     <div className="services-wrapper">
       <div className="services-business">
@@ -94,4 +94,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesSection;
