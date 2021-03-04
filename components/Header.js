@@ -11,9 +11,7 @@ const Header = () => {
     <div className="header">
       <nav>
         <Link href="/">
-          <a>
-            <img style={{ cursor: "pointer" }} src="/logo.svg" alt="" />
-          </a>
+          <a className="logo">FOCUS.</a>
         </Link>
         <ul>
           <div>

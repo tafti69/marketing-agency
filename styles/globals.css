@@ -33,6 +33,17 @@ p {
   line-height: 20px;
 }
 
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  color: #5e2ced;
+}
+
+.logo:hover {
+  opacity: 0.95;
+  transform: rotate(-2deg);
+}
+
 .work {
   display: flex;
   justify-content: center;
@@ -175,7 +186,7 @@ ul div {
 }
 
 li {
-  margin: 0 2rem;
+  margin: 0 1.5rem;
   list-style: none;
   font-weight: 500;
   transition: 0.1s ease-out;
@@ -286,11 +297,6 @@ li.activeLink {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-}
-
-.footer-logo:hover {
-  opacity: 0.95;
-  transform: rotate(-2deg);
 }
 
 .footer-social img {

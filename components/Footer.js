@@ -4,7 +4,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-logo">
-        <img src="/logo2.svg" alt="" />
+        <a style={{ color: "#fff" }} className="logo">
+          FOCUS.
+        </a>
         <span>© All Rights Reserved</span>
       </div>
       <div className="footer-help">
